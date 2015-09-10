@@ -67,16 +67,17 @@ void Game::Run() {
 
     auto num_players = _players.size();
     auto min_deck_size = num_players * max_hand_size;
-    auto cur_deck = _dealer.GetDeck();
-    for(auto cur_deck_size = cur_deck.Size(); min_deck_size <= cur_deck_size; cur_deck_size = cur_deck.Size()) {
-        Dealer::Deal(_dealer, _players, max_hand_size);
-        CalculatePlayerHandValues(_players);
-        RecordHandTypeCount(_players);
-        for(std::size_t i = 0; i < _players.size(); ++i) {
-            IncrementHandCount();
-        }
-        Dealer::TakeCardsFromPlayers(_dealer, _players);
+    auto& cur_deck = _dealer.GetDeck();
+
+    Dealer::Deal(_dealer, _players, max_hand_size);
+    CalculatePlayerHandValues(_players);
+    RecordHandTypeCount(_players);
+    for(auto& p : _players) {
+        IncrementHandCount();
+        p.DisplayHand(std::cout);
     }
+    Dealer::TakeCardsFromPlayers(_dealer, _players);
+
     ResetGame(_dealer);
     IncrementGameCount();
 
