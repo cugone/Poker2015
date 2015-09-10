@@ -5,6 +5,7 @@ class Card;
 
 #include "CHand.h"
 
+#include <ostream>
 
 class Player {
 public:
@@ -16,6 +17,8 @@ public:
     bool AddCardToHand(const Card& c);
     bool RemoveCardFromHand(const Card& c);
     void CalculateHandValue();
+
+    void DisplayHand(std::ostream& os = std::cout) const;
 
 protected:
 private:
