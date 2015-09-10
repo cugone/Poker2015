@@ -61,31 +61,24 @@ void Game::ResetGame(Dealer& d) {
     d.CombineDecks(d.GetDeck(), d.GetDiscardDeck());
 }
 
-void Game::Run(unsigned long long max_play_count) {
-    unsigned int playcount = 0;
-    do {
+void Game::Run() {
 
-        StartGame(_dealer);
+    StartGame(_dealer);
 
-        auto num_players = _players.size();
-        auto cur_deck_size = _dealer.GetDeck().Size();
-        auto min_deck_size = num_players * max_hand_size;
-
-        while(min_deck_size <= cur_deck_size) {
-            Dealer::Deal(_dealer, _players, max_hand_size);
-            CalculatePlayerHandValues(_players);
-            RecordHandTypeCount(_players);
-            for(std::size_t i = 0; i < _players.size(); ++i) {
-                IncrementHandCount();
-            }
-            Dealer::TakeCardsFromPlayers(_dealer, _players);
-
-            cur_deck_size = _dealer.GetDeck().Size();
+    auto num_players = _players.size();
+    auto min_deck_size = num_players * max_hand_size;
+    auto cur_deck = _dealer.GetDeck();
+    for(auto cur_deck_size = cur_deck.Size(); min_deck_size <= cur_deck_size; cur_deck_size = cur_deck.Size()) {
+        Dealer::Deal(_dealer, _players, max_hand_size);
+        CalculatePlayerHandValues(_players);
+        RecordHandTypeCount(_players);
+        for(std::size_t i = 0; i < _players.size(); ++i) {
+            IncrementHandCount();
         }
-        ResetGame(_dealer);
-        IncrementGameCount();
-
-    } while(++playcount < max_play_count);//PromptPlayAgain());
+        Dealer::TakeCardsFromPlayers(_dealer, _players);
+    }
+    ResetGame(_dealer);
+    IncrementGameCount();
 
 }
 

@@ -29,7 +29,7 @@ public:
     Game& operator=(const Game& rhs) = delete;
     Game&& operator=(const Game&& rhs) = delete;
 
-    void Run(unsigned long long max_play_count);
+    void Run();
 
     void LogPlayerHands(std::ostream& os) const;
     void LogPlayerHands(std::ostream& os);

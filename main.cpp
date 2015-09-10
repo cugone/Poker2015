@@ -41,7 +41,11 @@ int main() {
     std::vector<Player> players(max_num_players, Player{ });
 
     Game g(dealer, players);
-    g.Run(max_play_count);
+
+    unsigned long long playcount = 0;
+    do {
+        g.Run();
+    } while(max_play_count > 0 ? (++playcount < max_play_count) : PromptPlayAgain());
 
     std::ofstream file;
     file.open("stats.dat");
