@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\CHand.cpp
+* author:   Casey Ugone
+* summary:  Implements the hand class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "CHand.h"
 
 #include <functional>

@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\CPlayer.cpp
+* author:   Casey Ugone
+* summary:  Implements the player class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "CPlayer.h"
 
 #include "CCard.h"

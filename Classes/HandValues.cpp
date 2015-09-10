@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\HandValues.cpp
+* author:   Casey Ugone
+* summary:  Implements the hand values class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "HandValues.h"
 
 #include <cctype>

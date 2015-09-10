@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\CDealer.cpp
+* author:   Casey Ugone
+* summary:  Implements the dealer class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "CDealer.h"
 
 #include "CPlayer.h"

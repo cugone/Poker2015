@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\CardValues.cpp
+* author:   Casey Ugone
+* summary:  Implements the card values class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "CardValues.h"
 
 namespace cardvalue {

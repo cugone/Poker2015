@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\CCard.cpp
+* author:   Casey Ugone
+* summary:  Implements the card class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "CCard.h"
 
 Card::Card() : _value(0) { }

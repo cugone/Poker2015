@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\CDeck.cpp
+* author:   Casey Ugone
+* summary:  Implements the deck class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "CDeck.h"
 
 Deck::Deck() : _cards() { }

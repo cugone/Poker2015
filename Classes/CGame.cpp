@@ -1,3 +1,12 @@
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     Classes\CGame.cpp
+* author:   Casey Ugone
+* summary:  Implements the game class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include "CGame.h"
 
 #include <iomanip>

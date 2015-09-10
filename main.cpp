@@ -1,4 +1,12 @@
-
+/*******************************************************************************
+* solution: Poker
+* project:  Poker
+* file:     main.cpp
+* author:   Casey Ugone
+* summary:  Implements the main class
+*           Copyright (c) 2015 Blisspoint Softworks. All rights reserved.
+*
+*******************************************************************************/
 #include <iostream>
 #include <fstream>
 #include <iomanip>
